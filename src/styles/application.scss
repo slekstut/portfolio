@@ -8,17 +8,17 @@ html {
   padding: 0;
   box-sizing: border-box;
   background: $white;
-  overflow-x: hidden;
+  font-size: 16px;
 }
 
 #app {
   font-family: $poppins;
-  font-size: 1em;
   font-weight: 400;
   color: $primary-color;
-  
-//   NAVBAR START
+  overflow-x: hidden;
+  //   NAVBAR SECTION
   nav {
+    overflow-x: hidden;
     display: flex;
     justify-content: space-between;
     margin-top: 1.125em;
@@ -34,12 +34,12 @@ html {
     .logo {
       display: flex;
       align-items: center;
-      font-size: 1.5em;
+      font-size: 1.5rem;
       &:hover {
         transition: 0.3s;
         color: $lighter-yellow;
         cursor: pointer;
-    }
+      }
     }
     div {
       ul {
@@ -48,98 +48,275 @@ html {
           float: right;
           margin-left: 1.25em;
           list-style-type: none;
-          font-size: 1.5em;
-         
+          font-size: 1.5rem;
 
           &:hover {
-              transition: 0.3s;
-              color: $lighter-yellow;
-              cursor: pointer;
+            transition: 0.3s;
+            color: $lighter-yellow;
+            cursor: pointer;
           }
-
         }
       }
     }
   }
-//   NAVBAR ENDS
-//==============
-//   MAIN START
-.hero {
+  //   NAVBAR SECTION
+  //==============
+  //   MAIN SECTION
+  .hero {
+    overflow-y: hidden;
+    overflow-x: hidden;
     position: relative;
     height: 100vh;
-    overflow-x:hidden;
-    overflow-y:hidden;
     background: $primary-color;
     padding-left: 6vh;
     padding-right: 6vh;
-    h1 {
-        color:$white;
-        font-size:7em;
-        font-weight: 600;
-        text-transform: uppercase;
-        width: 70%;
-        letter-spacing: 1.34px;
-        line-height: 1em;
-        margin-top: .88em;
-        margin-bottom: 0;
-        padding-top: 6vh;
+    .main-title {
+      color: $white;
+      font-size: 7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.34px;
+      line-height: 1em;
+      margin-top: 0.88em;
+      margin-bottom: 0;
+      padding-top: 6vh;
+      max-width: 60%;
+      padding-left: 0 !important;
+      &:after {
+        display: inline-block;
+        content: " ";
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cg fill='%23ffb037' stroke='%23707070' stroke-width='1'%3E%3Crect width='25' height='25' rx='5' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='24' height='24' rx='4.5' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: 0.2em 0.2em;
+        height: 0.2em;
+        width: 0.2em;
+      }
     }
-    
+
     p {
-        color:$white;
-        text-transform: capitalize;
-        height: 2.0625em;
-        line-height: 2.0625em;
-        font-size: 1.5em;
-        margin-top: 0;
+      color: $white;
+      text-transform: capitalize;
+      height: 2.0625em;
+      line-height: 2.0625em;
+      font-size: 1.5em;
+      margin-top: 0;
     }
     .button {
-        height: 77px;
-        width: 356px;
-        background: transparent linear-gradient(99deg, #DE8600 0%, #FFE268D6 100%) 0% 0% no-repeat padding-box;
-        border-radius: 1em;
-        border: none;
-        text-transform: uppercase;
-        letter-spacing: 0;
-        color: $dark-green;
-        font-size: 1.5625em;
-        font-weight: bold;
-        margin-top: 5.05em;
-        border: none;
-        &:focus {
-            outline: none;
-        }
-        &:hover {
-            cursor: pointer;
-            color: $white;
-            background: $dark-green;
-            transition: .5s ease-in;
-        }
+      height: 77px;
+      width: 356px;
+      background: transparent linear-gradient(99deg, #de8600 0%, #ffe268d6 100%)
+        0% 0% no-repeat padding-box;
+      border-radius: 1em;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      color: $dark-green;
+      font-size: 1.5625em;
+      font-weight: bold;
+      margin-top: 5.05em;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        cursor: pointer;
+        color: $white;
+        background: $dark-green;
+        transition: 0.5s ease-in;
+      }
     }
     .image {
-        position:absolute;
-        left:38%;
-        top: 15%;
-        background-image: url('/img/background_image.png');
-        width:100%;
-        height:800px;
-        opacity: 27%;
-        
+      position: absolute;
+      left: 38%;
+      top: 15%;
+      background-image: url("/img/background_image.png");
+      width: 100%;
+      height: 800px;
+      opacity: 27%;
     }
-}
-//   MAIN ENDS
-///==============
-//   PROJECTS START
+  }
+  //   MAIN SECTION
+  ///==============
+  //   PROJECTS SECTION
 
-    .projects-wrapper {
-        height: 100vh;
-        background: $white;
-        margin: 0;
-        width: 100%;
-        padding-left: 6vh;
-        padding-right: 6vh;
-        .projects-box {
-            
+  div {
+
+  h1 {
+    font-size: 5.25em;
+    text-transform: capitalize;
+    padding-left: 6vh;
+    padding-right: 6vh;
+    margin-top: 1.45em;
+    margin-bottom: 1.87em;
+  }
+
+  .project-section {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: $white;
+    margin: 0;
+    width: 100%;
+   padding-bottom: 6.8em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px 10px;
+    grid-template-areas:
+      "project1 ."
+      ". project2";
+    
+      .project1 { grid-area: project1; }
+      .project2 { grid-area: project2; }
+
+    .project-box {
+      max-width: 100%;
+      text-align: center;
+      padding-left: 6vh;
+      padding-right: 6vh;
+
+      
+
+      .project-wrapper {
+        div {
+          width: 100%;
+          height: 30em;
         }
+        
+        div .portfolio-image {
+          position: relative;
+          background-image: url("/img/web-design.jpg");
+          max-width: 100%;
+          max-height: 100%;
+          margin: auto;
+          display: block;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color: $primary-color;
+          div {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            align-items: flex-end;
+            position: absolute;
+            bottom: 1em;
+            right: 1em;
+            transition: all 300ms ease;
+            a {
+              img {
+                width: 3em;
+                height: 3em;
+                margin-left: 1em;
+                opacity: 65%;
+                &:hover {
+                  opacity: 100%;
+                }
+              }
+            }
+          }
+          
+        }
+        div .portfolio-image2 {
+          position: relative;
+          background-image: url("/img/project2.jpg");
+          max-width: 100%;
+          max-height: 100%;
+          margin: auto;
+          display: block;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color: $primary-color;
+          div {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            align-items: flex-end;
+            position: absolute;
+            bottom: 1em;
+            right: 1em;
+            transition: all 300ms ease;
+            a {
+              img {
+                width: 3em;
+                height: 3em;
+                margin-left: 1em;
+                fill: currentColor;
+                color: $white;
+                opacity: 65%;
+                &:hover {
+                  opacity: 100%;
+                }
+              }
+            }
+          }
+          
+        }
+        
+      }
     }
+    h3 {
+      font-size: 1.88rem;
+      font-weight: 500;
+      margin: .5em 0 0 0;
+      color: $primary-color;
+      opacity: 65%;
+      transition: all 300ms ease;
+      &:hover {
+        opacity: 100%;
+      }
+    }
+    h5 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin: .5em 0 2em 0;
+      color: $primary-color;
+      opacity: 65%;
+      transition: all 300ms ease;
+      &:hover {
+        opacity: 100%;
+      }
+    }
+  }
+}
+}
+//   PROJECTS SECTION
+//==============
+//   ABOUT SECTION 
+
+.about-wrapper {
+  overflow-y: hidden;
+  .about {
+  height: 100vh;
+    background: transparent linear-gradient(113deg, #FFB037 0%, #FFE268 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    padding-left: 6vh;
+    padding-right: 6vh;
+    color: $white;
+    padding-top: .32em;
+    
+    #about-title {
+      font-size: 5.25rem;
+      font-weight: bold;
+      line-height: 1em;
+      padding: 0;
+      margin-bottom: 1em;
+      padding-left: 0 !important;
+      max-width: 4em;
+    }
+    p {
+      margin-top: .2em;
+      font-size: 1.777rem;
+      letter-spacing: .51px;
+    }
+  }
+  .skills-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    h3 {
+      font-weight: 400;
+      font-size: 2.812rem;
+      width: auto;
+    }
+  }
 }

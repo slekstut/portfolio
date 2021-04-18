@@ -3,6 +3,7 @@
     <Nav />
     <Main />
     <Projects />
+    <About />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Nav from "./components/Nav.vue";
 import Main from "./views/Main.vue";
 import Projects from "./views/Projects.vue";
+import About from "./views/About.vue";
 
 export default {
   name: "App",
@@ -17,6 +19,7 @@ export default {
     Nav,
     Main,
     Projects,
+    About,
   },
 };
 </script>
