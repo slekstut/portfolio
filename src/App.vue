@@ -4,6 +4,8 @@
     <Main />
     <Projects />
     <About />
+    <Contact />
+    <Footer />
   </div>
 </template>
 
@@ -12,6 +14,8 @@ import Nav from "./components/Nav.vue";
 import Main from "./views/Main.vue";
 import Projects from "./views/Projects.vue";
 import About from "./views/About.vue";
+import Contact from "./views/Contact.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
@@ -20,6 +24,8 @@ export default {
     Main,
     Projects,
     About,
+    Contact,
+    Footer,
   },
 };
 </script>
