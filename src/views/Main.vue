@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="hero">
-      <h1 class="main-title">Digitize your minds</h1>
+      <h1 class="main-title">Digitize <br> your minds</h1>
       <p>FullStack Web Developer</p>
       <button class="button">Check My Projects</button>
       <div class="image"></div>
