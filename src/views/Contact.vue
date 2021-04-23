@@ -1,42 +1,32 @@
 <template>
   <div class="contact-section">
-    <div >
+    <div>
       <h1 id="contact-title">Contact</h1>
-      <form action="">
-        <div class="field">
-          <input
-            type="text"
-            name="fullname"
-            id="fullname"
-            placeholder="John Doe"
-          />
-          <label for="fullname">Name</label>
-        </div>
+      <form>
+        <div class="floating-form">
+          <div class="floating-label">
+            <input class="floating-input" type="text" placeholder=" " />
+            <span class="highlight"></span>
+            <label>Name</label>
+          </div>
 
-        <div class="field">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="john.doe@example.com"
-          />
-          <label for="email">Email</label>
+          <div class="floating-label">
+            <input class="floating-input" type="text" placeholder=" " />
+            <span class="highlight"></span>
+            <label>Email</label>
+          </div>
+
+          <div class="floating-label">
+            <textarea class="floating-input floating-textarea" id="scrollbar" placeholder=" "></textarea>
+            <span class="highlight"></span>
+            <label>Message</label>
+          </div>
         </div>
-        <div class="field">
-          <textarea
-            name="message"
-            id="message"
-            cols="20"
-            rows="3"
-            placeholder="Your message for me"
-          ></textarea>
-          <label for="message">Message</label>
-        </div>
-        <input type="submit" />
+        <button class="submit-btn" type="submit">Send message</button>
       </form>
     </div>
     <div>
-      <h1 id="get-in-touch-text">get in touch if you have web project idea!</h1>
+      <h1 id="get-in-touch-text">get in touch with me!</h1>
     </div>
   </div>
 </template>

@@ -17,6 +17,7 @@
           <div class="icons-skills">
             <img src="../../public/img/html5-brands.svg" alt="html" />
             <img src="../../public/img/css3-alt-brands.svg" alt="css" />
+            <img src="../../public/img/sass-1.svg" alt="sass" />
             <img src="../../public/img/tailwind-css-icon.svg" alt="tailwind" />
             <img src="../../public/img/figma-brands.svg" alt="figma" />
             <img src="../../public/img/bootstrap-brands.svg" alt="bootstrap" />

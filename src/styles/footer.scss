@@ -1,0 +1,30 @@
+.footer-wrapper {
+    background: $primary-color;
+    div {
+        display: grid;
+        place-content: center;
+        gap: 1em;
+        grid-auto-flow: column;
+        h5 {
+            margin: 2em 0;
+            padding: 0;
+            color: $white;
+            font-weight: 300;
+            font-size: 1.5rem;
+            letter-spacing: .5px;
+            text-align: center;
+        }
+        img {
+            width: 2em;
+            height: 2em;
+            margin: 2em 0;
+            cursor: pointer;
+            align-self: center;
+            opacity: .6;
+            transition: all .2s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.125em;
+    color: $secondary-color;
+    background-color: transparent !important;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    padding-left: 6vh;
+    padding-right: 6vh;
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        &:hover {
+            transition: 0.3s;
+            color: $lighter-yellow;
+            cursor: pointer;
+        }
+    }
+    div {
+        ul {
+            display: flex;
+            li {
+                float: right;
+                margin-left: 1.25em;
+                list-style-type: none;
+                font-size: 1.5rem;
+                &:hover {
+                    transition: 0.3s;
+                    color: $lighter-yellow;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

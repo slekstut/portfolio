@@ -1,0 +1,135 @@
+.contact-section {
+    padding-left: 6vh;
+    padding-right: 6vh;
+    height: 1000px;
+    background: $primary-color;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    #contact-title {
+        color: $white;
+        margin: 2.38em 0 0 0;
+        padding: 0;
+    }
+    #get-in-touch-text {
+        color: $secondary-color;
+        font-size: 7em;
+        font-weight: 600;
+        letter-spacing: 3.22px;
+        text-align: left;
+        text-transform: uppercase;
+        margin: 3.4em 0 0 0;
+        padding: 0;
+        line-height: 1.2em;
+    }
+    form {
+        margin: 6.5em 0;
+        color: $white;
+        width: 70%;
+        .floating-form {
+            width: 100%;
+            .floating-label {
+                position: relative;
+                margin-bottom: 2.5em;
+                .floating-input {
+                    font-size: 1.2rem;
+                    padding: .8em .2em;
+                    display: block;
+                    width: 100%;
+                    height: 1em;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid $gray;
+                    color: $white;
+                    &:focus {
+                        outline: none;
+                    }
+                    .floating-input:focus {
+                        outline: none;
+                        border-bottom: 1px solid $white;
+                    }
+                }
+                label {
+                    color: $gray;
+                    font-size: 1.2rem;
+                    font-weight: normal;
+                    position: absolute;
+                    pointer-events: none;
+                    left: .2em;
+                    top: .1em;
+                    transition: 0.2s ease all;
+                    -moz-transition: 0.2s ease all;
+                    -webkit-transition: 0.2s ease all;
+                }
+                .floating-input:focus~label,
+                .floating-input:not(:placeholder-shown)~label {
+                    top: -2em;
+                    font-size: .9rem;
+                    color: $secondary-color;
+                }
+                .floating-input:focus~.bar:before,
+                .floating-input:focus~.bar:after {
+                    width: 50%;
+                }
+                .floating-textarea {
+                    min-height: 7em;
+                    max-height: 10em;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    resize: none;
+                    color: $white;
+                    width: 100%;
+                    padding: .3em 0;
+                }
+                #scrollbar::-webkit-scrollbar-track {
+                    background-color: $primary-color;
+                    border-radius: 10px;
+                }
+                #scrollbar::-webkit-scrollbar {
+                    width: 10px;
+                    background-color: $primary-color;
+                }
+                #scrollbar::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    background-color: $primary-color;
+                    background: linear-gradient(45deg, rgba(255, 176, 55, 1) 26%, rgba(255, 226, 104, 1) 71%);
+                }
+                textarea {
+                    cursor: auto;
+                }
+                .highlight {
+                    position: absolute;
+                    height: 50%;
+                    width: 100%;
+                    top: 15%;
+                    left: 0;
+                    pointer-events: none;
+                    opacity: 0.5;
+                }
+                .floating-input:focus~.highlight {
+                    -webkit-animation: inputHighlighter 0.3s ease;
+                    -moz-animation: inputHighlighter 0.3s ease;
+                    animation: inputHighlighter 0.3s ease;
+                }
+            }
+        }
+        .submit-btn {
+            width: 100%;
+            height: 60px;
+            font-size: 1.5rem;
+            color: $primary-color;
+            font-weight: 600;
+            margin-top: 2.95em;
+            background: transparent linear-gradient(98deg, #DE8600 0%, #FFE268D6 100%) 0% 0% no-repeat padding-box;
+            border-radius: 17px;
+            border: none;
+            opacity: .6;
+            transition: all .3s ease-in-out;
+            &:hover {
+                border: none;
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+    }
+}
