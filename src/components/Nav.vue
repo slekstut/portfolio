@@ -1,47 +1,39 @@
 <template>
-  <div>
-    <nav class="header" :class="{ 'is-hidden': !showHeader }">
-      <div class="logo">Sarunas Lekstutis</div>
-      <div>
-        <ul>
-          <li>Home</li>
-          <li>Projects</li>
-          <li>About</li>
-          <li>Contact</li>
+  <nav>
+    <div class="menu-icon" @click="toggleBodyClass">
+      <span class="menu-icon__line menu-icon__line-left"></span>
+      <span class="menu-icon__line"></span>
+      <span class="menu-icon__line menu-icon__line-right"></span>
+    </div>
+
+    <div class="nav">
+      <div class="nav__content">
+        <div class="logo">Sarunas Lekstutis</div>
+        <ul class="nav__list">
+          <li class="nav__list-item">Home</li>
+          <li class="nav__list-item">Projects</li>
+          <li class="nav__list-item">About</li>
+          <li class="nav__list-item">Contact</li>
         </ul>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </template>
 
 <script>
 export default {
-  data: () => ({
-    showHeader: true,
-    lastScrollPosition: 0,
-    scrollOffset: 40,
-  }),
-  mounted() {
-    this.lastScrollPosition = window.pageYOffset;
-    window.addEventListener("scroll", this.onScroll);
-  },
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.onScroll);
+  data() {
+    return {
+      active: false,
+    };
   },
   methods: {
-    // Toggle if navigation is shown or hidden
-    onScroll() {
-      if (window.pageYOffset < 0) {
-        return;
-      }
-      if (
-        Math.abs(window.pageYOffset - this.lastScrollPosition) <
-        this.scrollOffset
-      ) {
-        return;
-      }
-      this.showHeader = window.pageYOffset < this.lastScrollPosition;
-      this.lastScrollPosition = window.pageYOffset;
+    toggleBodyClass() {
+      this.active = !this.active;
+      let el = document.body;
+      this.active
+        ? el.classList.add("nav-active")
+        : el.classList.remove("nav-active");
     },
   },
 };
