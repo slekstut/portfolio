@@ -1,11 +1,11 @@
 .about-wrapper {
     .about {
-        height: 1400px;
+        height: 210vh;
         background: transparent linear-gradient(113deg, rgb(231, 148, 23) 0%, rgb(240, 215, 115) 100%) 0% 0% no-repeat padding-box;
         opacity: 1;
-        padding-left: 6vh;
-        padding-right: 6vh;
-        color: $white;
+        padding-left: 6vw;
+        padding-right: 6vw;
+        color: $dark-green;
         padding-top: .32em;
         #about-title {
             font-size: 5.25rem;
@@ -22,37 +22,87 @@
             letter-spacing: .51px;
             font-weight: 300;
             margin: 0;
+            text-align: justify;
         }
     }
     .skills-services {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 4em;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        justify-items: center;
+        // align-items: center;
+        grid-gap: 3em;
+        width: 100%;
+        margin-top: 5em;
+        div h3 {
+            // font-size: 3.94rem;
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 500;
+            padding: .2em 0;
+            white-space: nowrap;
+        }
         .icons-skills {
             display: grid;
             grid-gap: 3em 2em;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: auto;
             justify-items: center;
             align-items: center;
             img {
-                width: 100px;
+                width: 100%;
                 height: 100px;
             }
         }
-        h3 {
-            font-weight: 500;
-            font-size: 3.94rem;
-            width: auto;
-            margin: 1.27em 0 .5em 0;
-            white-space: nowrap;
-            &:last-child {
-                margin-top: .1em !important;
+        .about-text div {
+            h3 {
+                font-weight: 500;
+                font-size: 3rem;
+                width: 100%;
+            }
+            p {
+                font-size: 1.5rem;
+                margin: 0;
+                text-align: left;
             }
         }
-        p {
-            font-size: 2rem;
-            margin: 0;
+    }
+}
+
+@include media('<1090px') {
+    .about-wrapper {
+        font-size: 11px;
+        .about {
+            height: 1100px;
+        }
+        .skills-services {
+            font-size: 10px;
+        }
+    }
+}
+
+@include media('<800px') {
+    .about-wrapper {
+        font-size: 10px;
+        .about {
+            height: 230vh;
+        }
+        .skills-services {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: start;
+            .icons-skills {
+                margin-top: 3em;
+            }
+            .about-text {
+                margin: 4em 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 3em 3em;
+                justify-content: center;
+                div {
+                    text-align: center;
+                }
+            }
         }
     }
 }

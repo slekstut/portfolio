@@ -29,16 +29,18 @@
             <img src="../../public/img/laravel-brands.svg" alt="laravel" />
           </div>
         </div>
-        <div>
-          <h3>Service Provide</h3>
-          <p>
-            Front End Web Development
-            <br />Back End Web Development
-            <br />Web Design
-            <br />UI/UX Design
-          </p>
-          <h3>Availability</h3>
-          <p>Part time, freelance, full time.</p>
+        <div class="about-text">
+          <div>
+            <h3>Service Provide</h3>
+            <p>Front End Web Development</p>
+            <p>Back End Web Development</p>
+            <p>Web Design</p>
+            <p>UI/UX Design</p>
+          </div>
+          <div>
+            <h3>Availability</h3>
+            <p>Part time, freelance, full time.</p>
+          </div>
         </div>
       </div>
     </section>

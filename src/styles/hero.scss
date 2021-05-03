@@ -1,73 +1,76 @@
-.hero {
-    overflow-y: hidden;
-    overflow-x: hidden;
-    position: relative;
-    height: 920px;
-    background: $primary-color;
-    padding-left: 6vh;
-    padding-right: 6vh;
-    .main-title {
-        color: $white;
-        font-size: 7rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1.34px;
-        line-height: 1em;
-        margin-top: 0.88em;
-        margin-bottom: 0;
-        padding-top: 6vh;
-        width: 100%;
-        padding-left: 0 !important;
-        white-space: nowrap;
-        overflow: hidden;
-        &:after {
-            display: inline-block;
-            content: " ";
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cg fill='%23ffb037' stroke='%23707070' stroke-width='1'%3E%3Crect width='25' height='25' rx='5' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='24' height='24' rx='4.5' fill='none'/%3E%3C/g%3E%3C/svg%3E");
-            background-size: 0.2em 0.2em;
-            height: 0.2em;
-            width: 0.2em;
-        }
-    }
-    p {
-        color: $white;
-        text-transform: capitalize;
-        height: 2.0625em;
-        line-height: 2.0625em;
-        font-size: 1.5em;
-        margin-top: 0;
-    }
-    .button {
-        height: 77px;
-        width: 356px;
-        background: transparent linear-gradient(99deg, #de8600 0%, #ffe268d6 100%) 0% 0% no-repeat padding-box;
-        border-radius: 1em;
-        border: none;
-        text-transform: uppercase;
-        letter-spacing: 0;
-        color: $dark-green;
-        font-size: 1.5625em;
-        font-weight: bold;
-        margin-top: 5.05em;
-        // margin-top: 16vh;
-        border: none;
-        &:focus {
-            outline: none;
-        }
-        &:hover {
-            cursor: pointer;
-            transition: transform .2s ease, color .5s ease;
-            color: $white;
-            background: $dark-green;
-        }
-    }
-    .image {
-        position: absolute;
-        left: 38%;
-        top: 15%;
-        background-image: url("/img/background_image.png");
-        width: 100%;
-        height: 800px;
-        opacity: 27%;
-    }
-}
+   .hero {
+       overflow-y: hidden;
+       overflow-x: hidden;
+       position: relative;
+       height: 920px;
+       background: $primary-color;
+       padding-left: 6vw;
+       padding-right: 6vw;
+       z-index: 1;
+       .main-title {
+           color: $white;
+           font-size: 7rem;
+           font-weight: 600;
+           text-transform: uppercase;
+           letter-spacing: 1.34px;
+           line-height: 1em;
+           margin-top: 0.88em;
+           margin-bottom: 0;
+           padding-top: 6vh;
+           width: 100%;
+           padding-left: 0 !important;
+           white-space: nowrap;
+           overflow: hidden;
+           &:after {
+               display: inline-block;
+               content: " ";
+               background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cg fill='%23ffb037' stroke='%23707070' stroke-width='1'%3E%3Crect width='25' height='25' rx='5' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='24' height='24' rx='4.5' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+               background-size: 0.2em 0.2em;
+               height: 0.2em;
+               width: 0.2em;
+           }
+       }
+       p {
+           color: $white;
+           text-transform: capitalize;
+           height: 2.0625em;
+           line-height: 2.0625em;
+           font-size: 1.5em;
+           margin-top: 0;
+       }
+       .button {
+           height: 77px;
+           width: 356px;
+           background: transparent linear-gradient(99deg, #de8600 0%, #ffe268d6 100%) 0% 0% no-repeat padding-box;
+           border-radius: 1em;
+           border: none;
+           text-transform: uppercase;
+           letter-spacing: 0;
+           color: $dark-green;
+           font-size: 1.5625em;
+           font-weight: bold;
+           margin-top: 5.05em;
+           // margin-top: 16vh;
+           border: none;
+           position: inherit;
+           z-index: 1002;
+           &:focus {
+               outline: none;
+           }
+           &:hover {
+               cursor: pointer;
+               transition: transform .2s ease, color .5s ease;
+               color: $white;
+               background: $dark-green;
+           }
+       }
+       .image {
+           position: absolute;
+           left: 38%;
+           top: 15%;
+           background-image: url("/img/background_image.png");
+           width: 100%;
+           height: 800px;
+           opacity: 27%;
+       }
+   }

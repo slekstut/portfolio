@@ -1,23 +1,20 @@
 <template>
-  <nav>
-    <div class="menu-icon" @click="toggleBodyClass">
-      <span class="menu-icon__line menu-icon__line-left"></span>
-      <span class="menu-icon__line"></span>
-      <span class="menu-icon__line menu-icon__line-right"></span>
+  <header>
+    <h4>Sarunas Lekstutis</h4>
+    <nav :class="{ mobileNav: active }">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="burger" :class="{ open: active }" @click="active = !active">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-
-    <div class="nav">
-      <div class="nav__content">
-        <div class="logo">Sarunas Lekstutis</div>
-        <ul class="nav__list">
-          <li class="nav__list-item">Home</li>
-          <li class="nav__list-item">Projects</li>
-          <li class="nav__list-item">About</li>
-          <li class="nav__list-item">Contact</li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  </header>
 </template>
 
 <script>
@@ -27,14 +24,6 @@ export default {
       active: false,
     };
   },
-  methods: {
-    toggleBodyClass() {
-      this.active = !this.active;
-      let el = document.body;
-      this.active
-        ? el.classList.add("nav-active")
-        : el.classList.remove("nav-active");
-    },
-  },
+  
 };
 </script>

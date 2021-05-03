@@ -1,0 +1,226 @@
+$transition--length: .8;
+//default state
+nav {
+    background-color: $primary-color;
+    .nav__content {
+        padding-left: 6vw;
+        padding-right: 6vw;
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            color: $white;
+            font-size: 1.8rem;
+            padding: 1em 0;
+            cursor: pointer;
+            &:hover {
+                transition: transform .2s ease, color .5s ease;
+                color: $secondary-color;
+            }
+        }
+        .nav__list {
+            display: flex;
+            margin: 0;
+            padding: 1em 0;
+            justify-content: flex-end;
+            align-items: center;
+            .nav__list-item {
+                position: relative;
+                color: $white;
+                text-decoration: none;
+                list-style: none;
+                font-size: 1.8rem;
+                padding-left: 1em;
+                cursor: pointer;
+                text-align: center;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    background: $primary-color;
+                    width: .8em;
+                    height: 1px;
+                    top: 100%;
+                    transform: translate(0%, 0%);
+                    transition: all .3s ease;
+                    z-index: -100;
+                    background-color: $white;
+                }
+                &:hover {
+                    &:before {
+                        width: 80%;
+                        background-color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media('<tablet') {
+    body {
+        overflow-x: hidden;
+    }
+    nav {
+        .menu-icon {
+            $size: 30px;
+            height: $size;
+            width: $size;
+            position: fixed;
+            z-index: 2;
+            right: 4em;
+            top: 3em;
+            cursor: pointer;
+            &__line {
+                height: 2px;
+                width: $size;
+                display: block;
+                background-color: $white;
+                margin-bottom: 4px;
+                transition: transform .2s ease, background-color .5s ease;
+            }
+            &__line-left {
+                width: $size / 2;
+            }
+            &__line-right {
+                width: $size / 2;
+                float: right;
+            }
+        }
+        .nav {
+            $width: 100vw;
+            $height: 100vh;
+            $font--size--calc: calc(2vw + 10px);
+            $transition--easing: cubic-bezier(.77, 0, .175, 1);
+            position: fixed;
+            z-index: 1;
+            &:before,
+            &:after {
+                content: "";
+                position: fixed;
+                width: $width;
+                height: $height;
+                background: rgba($white, .2);
+                z-index: -100;
+                transition: transform $transition--easing $transition--length + s;
+                transform: translateX(0%) translateY(-100%);
+            }
+            &:after {
+                background: rgba(rgba($primary-color, .2), 1);
+                transition-delay: 0s;
+            }
+            &:before {
+                transition-delay: .1s;
+            }
+            &__content {
+                position: fixed;
+                top: 50%;
+                transform: translate(0%, -50%);
+                width: 100%;
+                text-align: right;
+                font-size: $font--size--calc;
+                font-weight: 200;
+            }
+            &__list-item {
+                position: relative;
+                display: inline-block;
+                transition-delay: $transition--length + s;
+                opacity: 0;
+                transform: translate(0%, 100%);
+                transition: opacity .2s ease, transform .3s ease;
+                cursor: pointer;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    background: $primary-color;
+                    width: 1em;
+                    height: 1px;
+                    top: 100%;
+                    transform: translate(0%, 0%);
+                    transition: all .3s ease;
+                    z-index: -1;
+                    background-color: $white;
+                }
+                &:hover {
+                    &:before {
+                        width: 100%;
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+        .logo {
+            display: none;
+        }
+    }
+    //active state
+    body.nav-active {
+        $menu--items--count: 4;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        .menu-icon {
+            &__line {
+                background-color: $white;
+                transform: translateX(0px) rotate(-45deg);
+            }
+            &__line-left {
+                transform: translateX(1px) rotate(45deg);
+            }
+            &__line-right {
+                transform: translateX(-2px) rotate(45deg);
+            }
+        }
+        .nav {
+            .nav__content {
+                display: flex;
+                justify-content: flex-end;
+                .nav__list {
+                    display: flex;
+                    flex-direction: column;
+                    li {
+                        font-size: 2rem;
+                        margin-bottom: .5em;
+                    }
+                }
+            }
+            visibility: visible;
+            &:before,
+            &:after {
+                transform: translateX(0%) translateY(0%);
+            }
+            &:after {
+                transition-delay: .1s;
+            }
+            &:before {
+                transition-delay: 0s;
+            }
+            &__list-item {
+                opacity: 1;
+                transform: translateX(0%);
+                transition: opacity .3s ease, transform .3s ease, color .1s ease;
+                @for $i from 0 through $menu--items--count {
+                    &:nth-child(#{$i}) {
+                        transition-delay: $transition--length * $i / 8 + .5 + s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// <script>
+// export default {
+// //   data() {
+// //     return {
+// //       active: false,
+// //     };
+// //   },
+// //   methods: {
+// //     toggleBodyClass() {
+// //       this.active = !this.active;
+// //       let el = document.body;
+// //       this.active
+// //         ? el.classList.add("nav-active")
+// //         : el.classList.remove("nav-active");
+// //     },
+// //   },
+// };
+// </script>

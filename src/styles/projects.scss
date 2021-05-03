@@ -2,8 +2,8 @@ div {
     h1 {
         font-size: 5.25em;
         text-transform: capitalize;
-        padding-left: 6vh;
-        padding-right: 6vh;
+        padding-left: 6vw;
+        padding-right: 6vw;
         margin-top: 1.45em;
         margin-bottom: 1.87em;
     }
@@ -26,8 +26,8 @@ div {
         .project-box {
             max-width: 100%;
             text-align: center;
-            padding-left: 6vh;
-            padding-right: 6vh;
+            padding-left: 6vw;
+            padding-right: 6vw;
             .project-wrapper {
                 div {
                     width: 100%;
@@ -125,5 +125,14 @@ div {
                 opacity: 100%;
             }
         }
+    }
+}
+
+@include media('<800px') {
+    div .project-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px 10px;
+        grid-template-areas: "project1" "project2";
     }
 }
