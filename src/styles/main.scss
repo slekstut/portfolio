@@ -44,6 +44,9 @@ html {
     @include media('<tablet') {
         font-size: 12px;
     }
+    @include media('<680px') {
+        font-size: 11px;
+    }
 }
 
 #app {

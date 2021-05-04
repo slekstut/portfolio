@@ -133,3 +133,24 @@
         }
     }
 }
+
+@include media('<700px') {
+    .contact-section {
+        height: 200vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "contact-text" "contact-form";
+        .contact-text {
+            grid-area: contact-text;
+        }
+        .contact-form {
+            grid-area: contact-form;
+        }
+        #get-in-touch-text {
+            margin: 1em 0 0 0;
+        }
+        #contact-title {
+            margin: 0 0 1em 0;
+        }
+    }
+}

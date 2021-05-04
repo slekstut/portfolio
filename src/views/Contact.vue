@@ -2,7 +2,7 @@
   <div class="contact-section">
     <div>
       <h1 id="contact-title">Contact</h1>
-      <form>
+      <form class="contact-form">
         <div class="floating-form">
           <div class="floating-label">
             <input class="floating-input" type="text" placeholder=" " />
@@ -25,7 +25,7 @@
         <button class="submit-btn" type="submit">Send message</button>
       </form>
     </div>
-    <div>
+    <div class="contact-text">
       <h1 id="get-in-touch-text">get in touch with me!</h1>
     </div>
   </div>
