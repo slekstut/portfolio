@@ -136,8 +136,9 @@
 
 @include media('<700px') {
     .contact-section {
-        height: 200vh;
+        height: 180vh;
         display: grid;
+        gap: .5em;
         grid-template-columns: 1fr;
         grid-template-areas: "contact-text" "contact-form";
         .contact-text {
@@ -145,12 +146,18 @@
         }
         .contact-form {
             grid-area: contact-form;
+            margin: 1em auto;
+            padding-bottom: 5em;
         }
         #get-in-touch-text {
-            margin: 1em 0 0 0;
+            margin: 1em auto;
+            max-width: 80%;
+            text-align: center;
         }
         #contact-title {
-            margin: 0 0 1em 0;
+            margin: 1em auto;
+            text-align: center;
         }
+        div {}
     }
 }

@@ -47,6 +47,9 @@ html {
     @include media('<680px') {
         font-size: 11px;
     }
+    @include media('<530px') {
+        font-size: 10px;
+    }
 }
 
 #app {

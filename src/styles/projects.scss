@@ -136,3 +136,11 @@ div {
         grid-template-areas: "project1" "project2";
     }
 }
+
+@include media('<450px') {
+    div {
+        h1 {
+            text-align: center;
+        }
+    }
+}
