@@ -1,12 +1,16 @@
 <template>
   <header>
-    <h4>Sarunas Lekstutis</h4>
+    <a href="#" v-scroll-to="'#home'" v-smooth-scroll><h4>Sarunas Lekstutis</h4></a>
     <nav :class="{ mobileNav: active }">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#" v-scroll-to="'#home'" v-smooth-scroll>Home</a></li>
+        <li>
+          <a href="#" v-scroll-to="'#projects'" v-smooth-scroll>Projects</a>
+        </li>
+        <li><a href="#" v-scroll-to="'#about'" v-smooth-scroll>About</a></li>
+        <li>
+          <a href="#" v-scroll-to="'#contact'" v-smooth-scroll>Contact</a>
+        </li>
       </ul>
     </nav>
     <div class="burger" :class="{ open: active }" @click="active = !active">
@@ -24,6 +28,5 @@ export default {
       active: false,
     };
   },
-  
 };
 </script>

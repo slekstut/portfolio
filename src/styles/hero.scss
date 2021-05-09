@@ -46,22 +46,24 @@
            border: none;
            text-transform: uppercase;
            letter-spacing: 0;
-           color: $dark-green;
            font-size: 1.5625em;
            font-weight: bold;
+           color: $dark-green;
            margin-top: 2.05em;
-           // margin-top: 16vh;
            border: none;
            position: inherit;
            z-index: 1002;
+           transition: 0.2s ease all;
+           -moz-transition: 0.2s ease all;
+           -webkit-transition: 0.2s ease all;
            &:focus {
                outline: none;
            }
            &:hover {
                cursor: pointer;
                transition: transform .2s ease, color .5s ease;
-               color: $white;
                background: $dark-green;
+               color: $white;
            }
        }
        .image {
@@ -86,7 +88,6 @@
    @include media('<600px') {
        .hero {
            .main-title {
-               //    font-size: 6rem;
                white-space: inherit;
            }
        }

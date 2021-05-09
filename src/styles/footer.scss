@@ -17,16 +17,20 @@
             letter-spacing: .5px;
             text-align: center;
         }
-        img {
-            width: 2em;
-            height: 2em;
-            margin: 2em 0;
-            cursor: pointer;
-            align-self: center;
-            opacity: .6;
-            transition: all .2s ease-in-out;
-            &:hover {
-                opacity: 1;
+        a {
+            display: grid;
+            place-content: center;
+            img {
+                width: 2em;
+                height: 2em;
+                margin: 2em 0;
+                cursor: pointer;
+                align-self: center;
+                opacity: .6;
+                transition: all .2s ease-in-out;
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
     }

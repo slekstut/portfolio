@@ -16,11 +16,17 @@ header {
     -moz-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    h4 {
-        color: $secondary-color;
-        font-size: 1.85rem;
-        font-weight: 300;
-        cursor: pointer;
+    a {
+        text-decoration: none;
+        h4 {
+            color: $secondary-color;
+            font-size: 1.85rem;
+            font-weight: 300;
+            cursor: pointer;
+            &:hover {
+                color: $lighter-yellow;
+            }
+        }
     }
     nav {
         display: flex;
@@ -35,6 +41,9 @@ header {
                     color: $secondary-color;
                     font-size: 1.85rem;
                     font-weight: 300;
+                    &:hover {
+                        color: $lighter-yellow;
+                    }
                     &::after {
                         content: '';
                         height: 2px;
