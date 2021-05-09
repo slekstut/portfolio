@@ -1,7 +1,7 @@
 <template>
   <div class="about-wrapper">
     <section class="about">
-      <h1 id="about-title">About</h1>
+      <h1 class="about-title">About</h1>
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam

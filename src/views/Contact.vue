@@ -1,7 +1,7 @@
 <template>
   <div class="contact-section">
     <div>
-      <h1 id="contact-title">Contact</h1>
+      <h1 class="contact-title">Contact</h1>
       <form class="contact-form">
         <div class="floating-form">
           <div class="floating-label">
@@ -26,7 +26,7 @@
       </form>
     </div>
     <div class="contact-text">
-      <h1 id="get-in-touch-text">get in touch with me!</h1>
+      <h1 class="get-in-touch-text">get in touch with me!</h1>
     </div>
   </div>
 </template>

@@ -1,5 +1,8 @@
 .footer-wrapper {
+    height: 20vh;
     background: $primary-color;
+    display: grid;
+    place-content: center;
     div {
         display: grid;
         place-content: center;

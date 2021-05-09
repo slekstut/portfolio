@@ -1,17 +1,17 @@
 .contact-section {
     padding-left: 6vw;
     padding-right: 6vw;
-    height: 900px;
+    height: 100%;
     background: $primary-color;
     display: grid;
     gap: 2em;
     grid-template-columns: 1fr 1fr;
-    #contact-title {
+    .contact-title {
         color: $white;
-        margin: 2.38em 0 0 0;
+        margin: 1.45em 0 0 0;
         padding: 0;
     }
-    #get-in-touch-text {
+    .get-in-touch-text {
         color: $secondary-color;
         font-size: 7em;
         font-weight: 600;
@@ -81,15 +81,15 @@
                     width: 100%;
                     padding: .3em 0;
                 }
-                #scrollbar::-webkit-scrollbar-track {
+                .scrollbar::-webkit-scrollbar-track {
                     background-color: $primary-color;
                     border-radius: 10px;
                 }
-                #scrollbar::-webkit-scrollbar {
+                .scrollbar::-webkit-scrollbar {
                     width: 10px;
                     background-color: $primary-color;
                 }
-                #scrollbar::-webkit-scrollbar-thumb {
+                .scrollbar::-webkit-scrollbar-thumb {
                     border-radius: 10px;
                     background-color: $primary-color;
                     background: linear-gradient(45deg, rgba(255, 176, 55, 1) 26%, rgba(255, 226, 104, 1) 71%);
@@ -115,7 +115,7 @@
         }
         .submit-btn {
             width: 100%;
-            height: 60px;
+            height: 4em;
             font-size: 1.5rem;
             color: $primary-color;
             font-weight: 600;
@@ -134,9 +134,16 @@
     }
 }
 
+@include media('<800px') {
+    .contact-section {
+        .contact-form {
+            width: 95%;
+        }
+    }
+}
+
 @include media('<700px') {
     .contact-section {
-        height: 180vh;
         display: grid;
         gap: .5em;
         grid-template-columns: 1fr;
@@ -148,16 +155,24 @@
             grid-area: contact-form;
             margin: 1em auto;
             padding-bottom: 5em;
+            width: 60%;
         }
-        #get-in-touch-text {
+        .get-in-touch-text {
             margin: 1em auto;
             max-width: 80%;
             text-align: center;
         }
-        #contact-title {
+        .contact-title {
             margin: 1em auto;
             text-align: center;
         }
-        div {}
+    }
+}
+
+@include media('<385px') {
+    .contact-section {
+        .get-in-touch-text {
+            font-size: 6em;
+        }
     }
 }

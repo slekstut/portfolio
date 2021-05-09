@@ -35,6 +35,12 @@ header {
                     color: $secondary-color;
                     font-size: 1.85rem;
                     font-weight: 300;
+                    &::after {
+                        content: '';
+                        height: 2px;
+                        width: 2em;
+                        border-bottom: 2px solid $secondary-color;
+                    }
                 }
             }
         }
