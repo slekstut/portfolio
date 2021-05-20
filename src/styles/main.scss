@@ -1,0 +1,59 @@
+@import "typography";
+@import "colors";
+@import "include-media";
+@import "navbar";
+@import "hero";
+@import "projects";
+@import "about";
+@import "contact";
+@import "footer";
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background: $white;
+    font-size: 16px;
+     ::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 12px;
+    }
+     ::-webkit-scrollbar {
+        width: 12px;
+        background-color: transparent;
+    }
+     ::-webkit-scrollbar-thumb {
+        border-radius: 1px;
+        background-color: transparent;
+        background: rgb(87, 95, 95) 71%;
+    }
+    @include media('<large-desktop') {
+        font-size: 15px;
+    }
+    @include media('<desktop') {
+        font-size: 13px;
+    }
+    @include media('<tablet') {
+        font-size: 12px;
+    }
+    @include media('<680px') {
+        font-size: 11px;
+    }
+    @include media('<530px') {
+        font-size: 10px;
+    }
+}
+
+#app {
+    font-family: $poppins;
+    font-weight: 400;
+    color: $primary-color;
+}

@@ -1,0 +1,212 @@
+.contact-section {
+    padding-left: 6vw;
+    padding-right: 6vw;
+    height: 100%;
+    background: $primary-color;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr;
+
+    .contact-title {
+        color: $white;
+        margin: 1.5em 0 0 0;
+        padding: 0;
+    }
+
+    .get-in-touch-text {
+        color: $secondary-color;
+        font-size: 7em;
+        font-weight: 600;
+        letter-spacing: 3.22px;
+        text-align: left;
+        text-transform: uppercase;
+        margin: .905em 0 0 0;
+        padding: 0;
+        line-height: 1.2em;
+    }
+
+    form {
+        margin: 6.5em 0;
+        color: $white;
+        width: 70%;
+
+        .floating-form {
+            width: 100%;
+
+            .form-error {
+                color: rgba(238, 22, 89, 1);
+            }
+
+            .floating-label {
+                position: relative;
+                margin-bottom: 2.5em;
+
+                .floating-input {
+                    font-size: 1.2rem;
+                    padding: .8em .2em;
+                    display: block;
+                    width: 100%;
+                    height: 1em;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid $gray;
+                    color: $white;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    .floating-input:focus {
+                        outline: none;
+                        border-bottom: 1px solid $white;
+                    }
+
+                    .error {
+                        color: rgba(238, 22, 89, 1);
+                        margin-top: 1em;
+                        // border: 1px solid rgba(238, 22, 89, 1);
+                    }
+                }
+
+                label {
+                    color: $gray;
+                    font-size: 1.2rem;
+                    font-weight: normal;
+                    position: absolute;
+                    pointer-events: none;
+                    left: .2em;
+                    top: .1em;
+                    transition: 0.2s ease all;
+                    -moz-transition: 0.2s ease all;
+                    -webkit-transition: 0.2s ease all;
+                }
+
+                .floating-input:focus~label,
+                .floating-input:not(:placeholder-shown)~label {
+                    top: -2em;
+                    font-size: .9rem;
+                    color: $secondary-color;
+                }
+
+                .floating-input:focus~.bar:before,
+                .floating-input:focus~.bar:after {
+                    width: 50%;
+                }
+
+                .floating-textarea {
+                    min-height: 7em;
+                    max-height: 10em;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    resize: none;
+                    color: $white;
+                    width: 100%;
+                    padding: .3em 0;
+                }
+
+                .scrollbar::-webkit-scrollbar-track {
+                    background-color: $primary-color;
+                    border-radius: 10px;
+                }
+
+                .scrollbar::-webkit-scrollbar {
+                    width: 10px;
+                    background-color: $primary-color;
+                }
+
+                .scrollbar::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    background-color: $primary-color;
+                    background: linear-gradient(45deg, rgba(255, 176, 55, 1) 26%, rgba(255, 226, 104, 1) 71%);
+                }
+
+                textarea {
+                    cursor: auto;
+                }
+
+                .highlight {
+                    position: absolute;
+                    height: 50%;
+                    width: 100%;
+                    top: 15%;
+                    left: 0;
+                    pointer-events: none;
+                    opacity: 0.5;
+                }
+
+                .floating-input:focus~.highlight {
+                    -webkit-animation: inputHighlighter 0.3s ease;
+                    -moz-animation: inputHighlighter 0.3s ease;
+                    animation: inputHighlighter 0.3s ease;
+                }
+            }
+        }
+
+        .submit-btn {
+            width: 100%;
+            height: 4em;
+            font-size: 1.5rem;
+            color: $primary-color;
+            font-weight: 600;
+            margin-top: 2.95em;
+            background: transparent linear-gradient(98deg, #DE8600 0%, #FFE268D6 100%) 0% 0% no-repeat padding-box;
+            border-radius: 17px;
+            border: none;
+            opacity: .6;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                border: none;
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@include media('<800px') {
+    .contact-section {
+        .contact-form {
+            width: 95%;
+        }
+    }
+}
+
+@include media('<700px') {
+    .contact-section {
+        display: grid;
+        gap: .5em;
+        grid-template-columns: 1fr;
+        grid-template-areas: "contact-text""contact-form";
+
+        .contact-text {
+            grid-area: contact-text;
+        }
+
+        .contact-form {
+            grid-area: contact-form;
+            margin: 1em auto;
+            padding-bottom: 5em;
+            width: 60%;
+        }
+
+        .get-in-touch-text {
+            margin: 1em auto;
+            max-width: 80%;
+            text-align: center;
+        }
+
+        .contact-title {
+            margin: 1em auto;
+            text-align: center;
+        }
+    }
+}
+
+@include media('<385px') {
+    .contact-section {
+        .get-in-touch-text {
+            font-size: 6em;
+        }
+    }
+}
