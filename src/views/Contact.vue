@@ -2,7 +2,7 @@
   <div class="contact-section" id="contact">
     <div>
       <h1 class="contact-title">Contact</h1>
-      <form class="contact-form" @submit.prevent="sendEmail">
+      <form class="contact-form" @submit.prevent="sendEmail" autocomplete="off">
         <div class="floating-form">
           <div class="floating-label" :class="{ 'form-error': $v.name.$error }">
             <input
@@ -130,10 +130,10 @@ export default {
       } else {
         try {
           emailjs.sendForm(
-            "service_cthe9lr",
-            "template_qff75yk",
+            process.env.VUE_APP_SERVICE_CODE,
+            process.env.VUE_APP_TEMPLATE_CODE,
             e.target,
-            "user_9px41zAYNoK4p3rWFjQBR",
+            process.env.VUE_APP_USER_CODE,
             {
               name: this.name,
               email: this.email,
@@ -144,6 +144,7 @@ export default {
           this.name = "";
           this.email = "";
           this.message = "";
+          this.$v.$reset();
         } catch (error) {
           console.log({ error });
         }
