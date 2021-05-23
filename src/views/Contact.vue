@@ -89,7 +89,7 @@
 <script>
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
-init("user_9px41zAYNoK4p3rWFjQBR");
+init(process.env.VUE_APP_USER);
 import {
   required,
   minLength,
