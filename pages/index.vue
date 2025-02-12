@@ -46,32 +46,34 @@ v-model="selectedLocale" class="ml-2 border-none bg-transparent cursor-pointer t
 
       <!-- main content -->
       <div class="flex mt-20">
-        <div class="w-3/4 pr-12">
+        <div class="w-3/4 pr-14">
           <!-- EXPIERENCE -->
           <div class="text-2xl text-warmgray font-black">{{ $t('expierence') }}</div>
           <div class="flex mt-6">
-            <div class="pr-16 text-lg font-bold w-1/4 text-right">2023-01 - ...</div>
+            <div class="pr-10 text-md font-bold w-1/4 text-right">2023-01 - ...</div>
             <div class="w-3/4">
-              <div class="text-lg font-bold">{{ $t('exp_1_title') }}</div>
+              <div class="text-md font-bold">{{ $t('exp_1_title') }}</div>
               <div class="mt-3 text-base font-normal text-justify">{{ $t('exp_1_desc') }}</div>
             </div>
           </div>
           <div class="flex mt-6">
-            <div class="pr-16 text-lg font-bold w-1/4 text-right">2022-07 - ...</div>
+            <div class="pr-10 text-md font-bold w-1/4 text-right">2022-07 - ...</div>
             <div class="w-3/4">
-              <div class="text-lg font-bold">{{ $t('exp_2_title') }}</div>
+              <div class="text-md font-bold">{{ $t('exp_2_title') }}</div>
               <div class="mt-3 text-base font-normal text-justify">{{ $t('exp_2_desc') }}</div>
             </div>
           </div>
           <div class="flex mt-6">
-            <div class="pr-16 text-lg font-bold w-1/4 text-right">2022-01 - 2022-12</div>
+            <div class="pr-10 text-md font-bold w-1/4 text-right">2022-01 - 2022-12</div>
             <div class="w-3/4">
-              <div class="text-lg font-bold">{{ $t('exp_3_title') }}</div>
+              <div class="text-md font-bold">{{ $t('exp_3_title') }}</div>
               <div class="mt-3 text-base font-normal text-justify">{{ $t('exp_3_desc') }}
             </div>
           </div>
         </div>
-        <div class="w-1/4 pl-6">
+        
+      </div>
+      <div class="w-1/4 pl-6">
           <!-- STACK -->
           <div class="text-2xl text-warmgray font-black">Tech Stack</div>
           <div class="mt-6">
@@ -81,7 +83,6 @@ v-model="selectedLocale" class="ml-2 border-none bg-transparent cursor-pointer t
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </div></template>
