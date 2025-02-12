@@ -46,65 +46,71 @@ v-model="selectedLocale" class="ml-2 border-none bg-transparent cursor-pointer t
 
       <!-- main content -->
       <div class="flex mt-20">
-        <div class="w-3/4">
+        <div class="w-3/4 pr-12">
           <!-- EXPIERENCE -->
-          <div class="text-2xl text-warmgray font-black">Expierence</div>
+          <div class="text-2xl text-warmgray font-black">{{ $t('expierence') }}</div>
           <div class="flex mt-6">
             <div class="pr-16 text-lg font-bold w-1/4 text-right">2023-01 - ...</div>
             <div class="w-3/4">
-              <div class="text-lg font-bold">Full Stack Developer at Arijus UAB</div>
-              <div class="mt-3 text-lg font-normal text-justify">As a full-stack developer, my responsibilities include developing new functionalities and enhancing
-                existing features in the intranet systems of a logistics company. I work on various areas such as
-                employee accounts, financial reports, signage, CRM, and other tools designed to streamline daily
-                operations and improve efficiency for my colleagues.</div>
+              <div class="text-lg font-bold">{{ $t('exp_1_title') }}</div>
+              <div class="mt-3 text-base font-normal text-justify">{{ $t('exp_1_desc') }}</div>
             </div>
           </div>
           <div class="flex mt-6">
             <div class="pr-16 text-lg font-bold w-1/4 text-right">2022-07 - ...</div>
             <div class="w-3/4">
-              <div class="text-lg font-bold">Freelancer</div>
-              <div class="mt-3 text-lg font-normal text-justify">Freelancing on my spare time.</div>
+              <div class="text-lg font-bold">{{ $t('exp_2_title') }}</div>
+              <div class="mt-3 text-base font-normal text-justify">{{ $t('exp_2_desc') }}</div>
             </div>
           </div>
           <div class="flex mt-6">
-          <div class="pr-16 text-lg font-bold w-1/4 text-right">2022-01 - 2022-12</div>
-          <div class="w-3/4">
-            <div class="text-lg font-bold">Front End Developer at Elpresta</div>
-            <div class="mt-3 text-lg font-normal text-justify">As a front-end developer, I was responsible for UI/UX design, implementing new functionalities, and
-              making fixes according to client requirements for their e-shops. I worked with design assets in Zeplin,
-              and the online shops were built on the Prestashop platform.</div>
+            <div class="pr-16 text-lg font-bold w-1/4 text-right">2022-01 - 2022-12</div>
+            <div class="w-3/4">
+              <div class="text-lg font-bold">{{ $t('exp_3_title') }}</div>
+              <div class="mt-3 text-base font-normal text-justify">{{ $t('exp_3_desc') }}
+            </div>
           </div>
         </div>
-        </div>
-        <div class="w-1/4">
+        <div class="w-1/4 pl-6">
           <!-- STACK -->
-           <div>Tech Stack</div>
-           <div>
-              <div>
-                <IconSvg name="icon-html" size="24" />
-                <div>HTML</div>
-              </div>
-           </div>
+          <div class="text-2xl text-warmgray font-black">Tech Stack</div>
+          <div class="mt-6">
+            <div v-for="(item, index) in stackData" :key="index" class="flex items-center mt-4">
+              <IconSvg :name="item.icon" size="24" />
+              <div class="ml-3">{{ item.name }}</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</template>
+</div></template>
 
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { ref, computed } from "vue";
 
-// i18n Setup
 const { locale, locales } = useI18n();
 const selectedLocale = ref(locale.value);
 
-// Get Available Locales
+const stackData = ref([
+  { name: "HTML", icon: "icon-html" },
+  { name: "CSS", icon: "icon-css" },
+  { name: "Tailwind", icon: "icon-tailwind" },
+  { name: "JavaScript", icon: "icon-js" },
+  { name: "Vue.js", icon: "icon-vue" },
+  { name: "Vuetify", icon: "icon-vuetify" },
+  { name: "Nuxt", icon: "icon-nuxt" },
+  { name: "PHP", icon: "icon-php" },
+  { name: "Phalcon", icon: "icon-phalcon" },
+  { name: "Laravel", icon: "icon-laravel" },
+  { name: "MySQL", icon: "icon-mysql" }
+]);
+
 const availableLocales = computed(() =>
   (locales.value as string).map((l) => ({ code: l.code, label: l.code.toUpperCase() }))
 );
 
-// Change Language
 const changeLanguage = () => {
   locale.value = selectedLocale.value;
 };
