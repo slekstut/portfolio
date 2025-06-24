@@ -13,6 +13,10 @@ export default {
         exp_2_desc: "Freelancing on my spare time.",
         exp_3_title: "Front End Developer at Elpresta",
         exp_3_desc: "As a front-end developer, I was responsible for UI/UX design, implementing new functionalities, and making fixes according to client requirements for their e-shops. I worked with design assets in Zeplin, and the online shops were built on the Prestashop platform.",
+        tech_stack: "Tech Stack",
+        education: "Education",
+        education_1_desc: "Fullstack web developing course at codeacademy",
+        education_2_desc: "Bachelor degree in IT engineering at Klaipeda University"
       },
       lt: {
         jobTitle: "FullStack Programuotojas",
@@ -24,6 +28,10 @@ export default {
         exp_2_desc: "Laisvu laiku papildomai programuoju.",
         exp_3_title: "Front End Programuotojas įmonėje Elpresta",
         exp_3_desc: "Kaip front-end programuotojas buvau atsakingas už UI/UX dizainą, naujų funkcijų įgyvendinimą ir pataisymus pagal klientų reikalavimus jų e-parduotuvėms. Dirbau su dizaino elementais Zeplin, o internetinės parduotuvės buvo sukurtos naudojant Prestashop platformą.",
+        tech_stack: "Technologijos",
+        education: "Išsilavinimas",
+        education_1_desc: "Fullstack web developing kursas codeacademy",
+        education_2_desc: "Bakalauras IT inžinerijos Klaipėdos universitetas"
       }
     }
   };
